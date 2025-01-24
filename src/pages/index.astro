@@ -1,11 +1,136 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+    <!-- content goes here -->
+    <div
+        class="relative isolate overflow-hidden py-24 sm:py-32 bg-gray-900 h-full"
+    >
+        <svg
+            viewBox="0 0 1024 1024"
+            class="absolute left-1/2 top-1/2 -z-10 size-[128rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+            aria-hidden="true"
+        >
+            <circle
+                cx="512"
+                cy="512"
+                r="512"
+                fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                fill-opacity=".75"></circle>
+            <defs>
+                <linearGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                    <stop stop-color="oklch(.6 .118 184.704)"></stop>
+                    <stop offset="1" stop-color="#022f2e"></stop>
+                </linearGradient>
+            </defs>
+        </svg>
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div
+                class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+            >
+                <div class="lg:pr-8 lg:pt-4">
+                    <div class="lg:max-w-lg">
+                        <h2 class="text-base/7 font-semibold text-teal-400">
+                            Sunday Evening Worship at 5:00 PM
+                        </h2>
+                        <p
+                            class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+                        >
+                            Growing together in Lynnwood
+                        </p>
+                        <p class="mt-6 text-lg/8 text-gray-300">
+                            Koinonia Church is a family-friendly,
+                            multi-generational, and multi-ethnic community in
+                            Lynnwood, Washington. We are dedicated to heartfelt
+                            worship, biblical fellowship and prayer, equipping
+                            believers for ministry, and making disciples who
+                            make disciples.
+                        </p>
+
+                        <div
+                            class="mt-10 flex items-center justify-left gap-x-6"
+                        >
+                            <a
+                                href="https://maps.app.goo.gl/ViqJSyV4yLm2DtsVA"
+                                target="_blank"
+                                class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                                >Plan your visit</a
+                            >
+                            <a
+                                href="https://mvkoinonia.church"
+                                target="_blank"
+                                class="text-sm/6 font-semibold text-white"
+                                >Learn more about us <span aria-hidden="true"
+                                    >→</span
+                                ></a
+                            >
+                        </div>
+                        <!-- <dl
+                            class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none"
+                        >
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    Worship.
+                                </dt>
+                                <dd class="inline">
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Maiores impedit
+                                    perferendis suscipit eaque, iste dolor
+                                    cupiditate blanditiis ratione.
+                                </dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    Connect
+                                </dt>
+                                <dd class="inline">
+                                    Anim aute id magna aliqua ad ad non deserunt
+                                    sunt. Qui irure qui lorem cupidatat commodo.
+                                </dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    Grow
+                                </dt>
+                                <dd class="inline">
+                                    Ac tincidunt sapien vehicula erat auctor
+                                    pellentesque rhoncus. Et magna sit morbi
+                                    lobortis.
+                                </dd>
+                            </div>
+                            <div class="relative pl-9">
+                                <dt class="inline font-semibold text-gray-900">
+                                    Serve
+                                </dt>
+                                <dd class="inline">
+                                    Ac tincidunt sapien vehicula erat auctor
+                                    pellentesque rhoncus. Et magna sit morbi
+                                    lobortis.
+                                </dd>
+                            </div>
+                        </dl> -->
+                    </div>
+                </div>
+                <Image
+                    src="/images/church.jpg"
+                    alt="church"
+                    class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                    width={2848}
+                    height={1767}
+                />
+                <!-- <img
+                    src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
+                    alt="Product screenshot"
+                    class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+                    width="2432"
+                    height="1442"
+                /> -->
+            </div>
+        </div>
+    </div>
+</BaseLayout>
